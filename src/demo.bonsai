@@ -322,7 +322,7 @@ Item2.Light as Light)</scr:Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>0</TranslationX>
                     <TranslationY>5.99</TranslationY>
-                    <TranslationZ>-1495</TranslationZ>
+                    <TranslationZ>-1427</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>90</RotationY>
                     <RotationX>-90</RotationX>
@@ -405,7 +405,7 @@ Item2.Light as Light)</scr:Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>0</TranslationX>
                     <TranslationY>-1.99</TranslationY>
-                    <TranslationZ>-1495</TranslationZ>
+                    <TranslationZ>-1427</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>-90</RotationY>
                     <RotationX>90</RotationX>
@@ -488,7 +488,7 @@ Item2.Light as Light)</scr:Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>4</TranslationX>
                     <TranslationY>2</TranslationY>
-                    <TranslationZ>-1495</TranslationZ>
+                    <TranslationZ>-1427</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>90</RotationY>
                     <RotationX>0</RotationX>
@@ -571,7 +571,7 @@ Item2.Light as Light)</scr:Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>-4</TranslationX>
                     <TranslationY>2</TranslationY>
-                    <TranslationZ>-1495</TranslationZ>
+                    <TranslationZ>-1427</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>90</RotationY>
                     <RotationX>0</RotationX>
@@ -902,7 +902,7 @@ Item2.Light as Light)</scr:Expression>
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
               <TranslationX>0</TranslationX>
               <TranslationY>-0.2</TranslationY>
-              <TranslationZ>-46</TranslationZ>
+              <TranslationZ>0</TranslationZ>
               <RotationZ>12</RotationZ>
               <RotationY>33.3333359</RotationY>
               <RotationX>70.6666641</RotationX>
@@ -1183,7 +1183,7 @@ Item2.Light as Light)</scr:Expression>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
               <ExtentX>0.03</ExtentX>
-              <ExtentY>0.05</ExtentY>
+              <ExtentY>0.054</ExtentY>
               <LocationX>0.5</LocationX>
               <LocationY>0.95</LocationY>
               <Layer>0</Layer>
@@ -1344,7 +1344,7 @@ Item2.Light as Light)</scr:Expression>
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
               <TranslationX>0</TranslationX>
               <TranslationY>-0.2</TranslationY>
-              <TranslationZ>-34</TranslationZ>
+              <TranslationZ>-1</TranslationZ>
               <RotationZ>12</RotationZ>
               <RotationY>33.3333359</RotationY>
               <RotationX>70.6666641</RotationX>
@@ -1625,7 +1625,7 @@ Item2.Light as Light)</scr:Expression>
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
               <ExtentX>0.03</ExtentX>
-              <ExtentY>0.05</ExtentY>
+              <ExtentY>0.999999344</ExtentY>
               <LocationX>0.5</LocationX>
               <LocationY>0.95</LocationY>
               <Layer>0</Layer>
@@ -1703,6 +1703,9 @@ Item2.Light as Light)</scr:Expression>
         <Combinator xsi:type="rx:Merge" />
       </Expression>
       <Expression xsi:type="Combinator">
+        <Combinator xsi:type="rx:Merge" />
+      </Expression>
+      <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Repeat" />
       </Expression>
       <Expression xsi:type="rx:SelectMany">
@@ -1758,7 +1761,7 @@ Item2.Light as Light)</scr:Expression>
         <Name>Score</Name>
       </Expression>
       <Expression xsi:type="Format">
-        <Format>Score {0}</Format>
+        <Format>Score {0:0.0}</Format>
         <Selector>it</Selector>
       </Expression>
       <Expression xsi:type="PropertyMapping">
@@ -1769,7 +1772,7 @@ Item2.Light as Light)</scr:Expression>
       <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawText.bonsai">
         <ExtentX>1</ExtentX>
         <ExtentY>1</ExtentY>
-        <Text>Score 3.2</Text>
+        <Text>Score 1.6</Text>
         <Font>Microsoft Sans Serif, 48pt</Font>
         <Alignment>Center</Alignment>
         <LineAlignment>Center</LineAlignment>
@@ -1822,12 +1825,13 @@ Item2.Light as Light)</scr:Expression>
       <Edge From="36" To="37" Label="Source2" />
       <Edge From="37" To="38" Label="Source1" />
       <Edge From="38" To="39" Label="Source1" />
-      <Edge From="40" To="41" Label="Source1" />
+      <Edge From="39" To="40" Label="Source1" />
       <Edge From="41" To="42" Label="Source1" />
-      <Edge From="42" To="46" Label="Source1" />
-      <Edge From="43" To="44" Label="Source1" />
+      <Edge From="42" To="43" Label="Source1" />
+      <Edge From="43" To="47" Label="Source1" />
       <Edge From="44" To="45" Label="Source1" />
-      <Edge From="45" To="46" Label="Source2" />
+      <Edge From="45" To="46" Label="Source1" />
+      <Edge From="46" To="47" Label="Source2" />
     </Edges>
   </Workflow>
 </WorkflowBuilder>
