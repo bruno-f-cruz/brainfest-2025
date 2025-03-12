@@ -132,6 +132,19 @@
               <gl:ColorType>Unchanged</gl:ColorType>
               <gl:FlipMode>Vertical</gl:FlipMode>
             </gl:TextureConfiguration>
+            <gl:TextureConfiguration xsi:type="gl:ImageTexture">
+              <gl:Name>Orange</gl:Name>
+              <gl:Width xsi:nil="true" />
+              <gl:Height xsi:nil="true" />
+              <gl:InternalFormat>Rgba</gl:InternalFormat>
+              <gl:WrapS>Repeat</gl:WrapS>
+              <gl:WrapT>Repeat</gl:WrapT>
+              <gl:MinFilter>Linear</gl:MinFilter>
+              <gl:MagFilter>Linear</gl:MagFilter>
+              <gl:FileName>Textures\orange\Fruit.jpg</gl:FileName>
+              <gl:ColorType>Unchanged</gl:ColorType>
+              <gl:FlipMode>Vertical</gl:FlipMode>
+            </gl:TextureConfiguration>
           </gl:Textures>
         </Combinator>
       </Expression>
@@ -145,6 +158,10 @@
             <gl:MeshConfiguration xsi:type="gl:TexturedModel">
               <gl:Name>Strawberry</gl:Name>
               <gl:FileName>Textures\strawberry\Strawberry-L3.obj</gl:FileName>
+            </gl:MeshConfiguration>
+            <gl:MeshConfiguration xsi:type="gl:TexturedModel">
+              <gl:Name>Orange</gl:Name>
+              <gl:FileName>Textures\orange\12204_Fruit_v1_L3.obj</gl:FileName>
             </gl:MeshConfiguration>
           </gl:Meshes>
         </Combinator>
@@ -302,7 +319,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>5.99</TranslationY>
-                          <TranslationZ>-1336.65088</TranslationZ>
+                          <TranslationZ>-1477.86841</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>-90</RotationX>
@@ -385,7 +402,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>-1.99</TranslationY>
-                          <TranslationZ>-1336.65088</TranslationZ>
+                          <TranslationZ>-1477.86841</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>90</RotationX>
@@ -468,7 +485,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1336.65088</TranslationZ>
+                          <TranslationZ>-1477.86841</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -551,7 +568,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>-4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1336.65088</TranslationZ>
+                          <TranslationZ>-1477.86841</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -727,7 +744,7 @@
                 <dsp:Min>0</dsp:Min>
                 <dsp:Max>1</dsp:Max>
                 <dsp:RangeMin>0</dsp:RangeMin>
-                <dsp:RangeMax>0.1</dsp:RangeMax>
+                <dsp:RangeMax>0.01</dsp:RangeMax>
                 <dsp:RescaleType>Linear</dsp:RescaleType>
               </Combinator>
             </Expression>
@@ -790,7 +807,7 @@
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawText.bonsai">
               <ExtentX>1</ExtentX>
               <ExtentY>1</ExtentY>
-              <Text>Score 0.0</Text>
+              <Text>Score 1.2</Text>
               <Font>Microsoft Sans Serif, 48pt</Font>
               <Alignment>Center</Alignment>
               <LineAlignment>Center</LineAlignment>
@@ -927,7 +944,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Apple</Value>
+                <Value>Strawberry</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -937,7 +954,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
-                <Value>0.35</Value>
+                <Value>0.25</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -968,7 +985,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="StringProperty">
-                <Value>Strawberry</Value>
+                <Value>Orange</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -978,7 +995,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
-                <Value>0.25</Value>
+                <Value>0.1</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="Combinator">
@@ -1088,11 +1105,11 @@
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>0</TranslationX>
-                    <TranslationY>-0.2</TranslationY>
-                    <TranslationZ>-28.2788086</TranslationZ>
-                    <RotationZ>12</RotationZ>
-                    <RotationY>33.3333359</RotationY>
-                    <RotationX>70.6666641</RotationX>
+                    <TranslationY>-1</TranslationY>
+                    <TranslationZ>-10.2228088</TranslationZ>
+                    <RotationZ>0</RotationZ>
+                    <RotationY>0</RotationY>
+                    <RotationX>-45</RotationX>
                     <ScaleX>0.25</ScaleX>
                     <ScaleY>0.25</ScaleY>
                     <ScaleZ>0.25</ScaleZ>
@@ -1330,7 +1347,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="FloatProperty">
-                      <Value>0.1</Value>
+                      <Value>1</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
