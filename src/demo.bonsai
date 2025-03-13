@@ -36,7 +36,7 @@
               <gl:Blue>8</gl:Blue>
               <gl:Alpha>8</gl:Alpha>
             </gl:ColorFormat>
-            <gl:Depth>16</gl:Depth>
+            <gl:Depth>32</gl:Depth>
             <gl:Stencil>0</gl:Stencil>
             <gl:Samples>0</gl:Samples>
             <gl:AccumulatorFormat>
@@ -319,7 +319,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>5.99</TranslationY>
-                          <TranslationZ>-1784.87622</TranslationZ>
+                          <TranslationZ>-961.114441</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>-90</RotationX>
@@ -402,7 +402,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>-1.99</TranslationY>
-                          <TranslationZ>-1784.87622</TranslationZ>
+                          <TranslationZ>-961.114441</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>90</RotationX>
@@ -485,7 +485,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1784.87622</TranslationZ>
+                          <TranslationZ>-961.114441</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -568,7 +568,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>-4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1784.87622</TranslationZ>
+                          <TranslationZ>-961.114441</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -664,12 +664,26 @@
                     <Selector>Accumulation,Value</Selector>
                   </Expression>
                   <Expression xsi:type="Add" />
+                  <Expression xsi:type="Combinator">
+                    <Combinator xsi:type="dsp:Rescale">
+                      <dsp:Min>-1</dsp:Min>
+                      <dsp:Max>99999</dsp:Max>
+                      <dsp:RangeMin>-1</dsp:RangeMin>
+                      <dsp:RangeMax>99999</dsp:RangeMax>
+                      <dsp:RescaleType>Clamp</dsp:RescaleType>
+                    </Combinator>
+                  </Expression>
+                  <Expression xsi:type="scr:ExpressionTransform">
+                    <scr:Expression>single(it)</scr:Expression>
+                  </Expression>
                   <Expression xsi:type="WorkflowOutput" />
                 </Nodes>
                 <Edges>
                   <Edge From="0" To="1" Label="Source1" />
                   <Edge From="1" To="2" Label="Source1" />
                   <Edge From="2" To="3" Label="Source1" />
+                  <Edge From="3" To="4" Label="Source1" />
+                  <Edge From="4" To="5" Label="Source1" />
                 </Edges>
               </Workflow>
             </Expression>
@@ -807,7 +821,7 @@
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawText.bonsai">
               <ExtentX>1</ExtentX>
               <ExtentY>1</ExtentY>
-              <Text>Score 1.0</Text>
+              <Text>Score 6.5</Text>
               <Font>Microsoft Sans Serif, 120pt</Font>
               <Alignment>Center</Alignment>
               <LineAlignment>Center</LineAlignment>
@@ -1069,7 +1083,7 @@
                     <Combinator xsi:type="gl:BindTexture">
                       <gl:TextureSlot>Texture0</gl:TextureSlot>
                       <gl:ShaderName>TexturedModel</gl:ShaderName>
-                      <gl:TextureName>Strawberry</gl:TextureName>
+                      <gl:TextureName>Orange</gl:TextureName>
                       <gl:TextureTarget>Texture2D</gl:TextureTarget>
                     </Combinator>
                   </Expression>
@@ -1093,7 +1107,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="FloatProperty">
-                      <Value>0.25</Value>
+                      <Value>0.1</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -1106,13 +1120,13 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>0</TranslationX>
                     <TranslationY>-1</TranslationY>
-                    <TranslationZ>-39.87034</TranslationZ>
+                    <TranslationZ>-2.15014648</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>0</RotationY>
                     <RotationX>-45</RotationX>
-                    <ScaleX>0.25</ScaleX>
-                    <ScaleY>0.25</ScaleY>
-                    <ScaleZ>0.25</ScaleZ>
+                    <ScaleX>0.1</ScaleX>
+                    <ScaleY>0.1</ScaleY>
+                    <ScaleZ>0.1</ScaleZ>
                     <Ambient>
                       <X>0.2</X>
                       <Y>0.2</Y>
@@ -1129,7 +1143,7 @@
                       <Z>0.8</Z>
                     </Specular>
                     <SpecularExponent>10</SpecularExponent>
-                    <MeshName>Strawberry</MeshName>
+                    <MeshName>Orange</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>z pos</Name>
@@ -1347,7 +1361,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="FloatProperty">
-                      <Value>1</Value>
+                      <Value>0.1</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1390,7 +1404,7 @@
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
                     <ExtentX>0.03</ExtentX>
-                    <ExtentY>0.05</ExtentY>
+                    <ExtentY>0.9999992</ExtentY>
                     <LocationX>0.5</LocationX>
                     <LocationY>0.95</LocationY>
                     <Layer>0</Layer>
@@ -1528,6 +1542,79 @@
             <Expression xsi:type="rx:PublishSubject">
               <Name>Reset</Name>
             </Expression>
+            <Expression xsi:type="Unit" />
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Reset</Name>
+            </Expression>
+            <Expression xsi:type="Unit" />
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Merge" />
+            </Expression>
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="Duration" />
+            </Expression>
+            <Expression xsi:type="rx:CreateObservable">
+              <Workflow>
+                <Nodes>
+                  <Expression xsi:type="ExternalizedMapping">
+                    <Property Name="Duration" />
+                  </Expression>
+                  <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.RangeAnimation.bonsai">
+                    <Duration>60</Duration>
+                    <RangeBegin>1</RangeBegin>
+                    <RangeEnd>0</RangeEnd>
+                  </Expression>
+                  <Expression xsi:type="WorkflowOutput" />
+                </Nodes>
+                <Edges>
+                  <Edge From="0" To="1" Label="Source1" />
+                  <Edge From="1" To="2" Label="Source1" />
+                </Edges>
+              </Workflow>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Switch" />
+            </Expression>
+            <Expression xsi:type="rx:BehaviorSubject">
+              <Name>TimeLeft</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>PostDrawing</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="gl:UpdateViewportState">
+                <gl:X>0</gl:X>
+                <gl:Y>0</gl:Y>
+                <gl:Width>1</gl:Width>
+                <gl:Height>1</gl:Height>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="BonVision:Environment.OrthographicView.bonsai">
+              <Left>0</Left>
+              <Right>1</Right>
+              <Bottom>0</Bottom>
+              <Top>1</Top>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>TimeLeft</Name>
+            </Expression>
+            <Expression xsi:type="PropertyMapping">
+              <PropertyMappings>
+                <Property Name="ExtentY" />
+              </PropertyMappings>
+            </Expression>
+            <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
+              <ExtentX>0.05</ExtentX>
+              <ExtentY>-6.217249E-14</ExtentY>
+              <LocationX>0</LocationX>
+              <LocationY>0.5</LocationY>
+              <Layer>10</Layer>
+              <Angle>0</Angle>
+              <ColorR>0.8</ColorR>
+              <ColorG>0</ColorG>
+              <ColorB>0.8</ColorB>
+              <ColorA>1</ColorA>
+            </Expression>
           </Nodes>
           <Edges>
             <Edge From="0" To="1" Label="Source1" />
@@ -1595,6 +1682,18 @@
             <Edge From="63" To="64" Label="Source2" />
             <Edge From="64" To="65" Label="Source1" />
             <Edge From="66" To="67" Label="Source1" />
+            <Edge From="68" To="71" Label="Source1" />
+            <Edge From="69" To="70" Label="Source1" />
+            <Edge From="70" To="71" Label="Source2" />
+            <Edge From="71" To="73" Label="Source1" />
+            <Edge From="72" To="73" Label="Source2" />
+            <Edge From="73" To="74" Label="Source1" />
+            <Edge From="74" To="75" Label="Source1" />
+            <Edge From="76" To="77" Label="Source1" />
+            <Edge From="77" To="78" Label="Source1" />
+            <Edge From="78" To="81" Label="Source1" />
+            <Edge From="79" To="80" Label="Source1" />
+            <Edge From="80" To="81" Label="Source2" />
           </Edges>
         </Workflow>
       </Expression>
