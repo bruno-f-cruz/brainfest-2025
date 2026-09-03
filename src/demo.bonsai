@@ -330,7 +330,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>5.99</TranslationY>
-                          <TranslationZ>-1864.75</TranslationZ>
+                          <TranslationZ>-1587.2771</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>-90</RotationX>
@@ -413,7 +413,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>0</TranslationX>
                           <TranslationY>-1.99</TranslationY>
-                          <TranslationZ>-1864.75</TranslationZ>
+                          <TranslationZ>-1587.2771</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>-90</RotationY>
                           <RotationX>90</RotationX>
@@ -496,7 +496,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1864.75</TranslationZ>
+                          <TranslationZ>-1587.2771</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -579,7 +579,7 @@
                         <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                           <TranslationX>-4</TranslationX>
                           <TranslationY>2</TranslationY>
-                          <TranslationZ>-1864.75</TranslationZ>
+                          <TranslationZ>-1587.2771</TranslationZ>
                           <RotationZ>0</RotationZ>
                           <RotationY>90</RotationY>
                           <RotationX>0</RotationX>
@@ -741,31 +741,31 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="rx:Repeat" />
             </Expression>
-            <Expression xsi:type="Combinator">
-              <Combinator xsi:type="gli:MouseWheel" />
-            </Expression>
-            <Expression xsi:type="MemberSelector">
-              <Selector>EventArgs.DeltaPrecise</Selector>
-            </Expression>
-            <Expression xsi:type="Multiply">
-              <Operand xsi:type="FloatProperty">
-                <Value>1000</Value>
-              </Operand>
-            </Expression>
             <Expression xsi:type="Disable">
-              <Builder xsi:type="SubscribeSubject">
-                <Name>Events</Name>
-              </Builder>
-            </Expression>
-            <Expression xsi:type="Disable">
-              <Builder xsi:type="beh:Parse">
-                <harp:Register xsi:type="beh:AnalogData" />
+              <Builder xsi:type="Combinator">
+                <Combinator xsi:type="gli:MouseWheel" />
               </Builder>
             </Expression>
             <Expression xsi:type="Disable">
               <Builder xsi:type="MemberSelector">
-                <Selector>Encoder</Selector>
+                <Selector>EventArgs.DeltaPrecise</Selector>
               </Builder>
+            </Expression>
+            <Expression xsi:type="Disable">
+              <Builder xsi:type="Multiply">
+                <Operand xsi:type="FloatProperty">
+                  <Value>1000</Value>
+                </Operand>
+              </Builder>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Events</Name>
+            </Expression>
+            <Expression xsi:type="beh:Parse">
+              <harp:Register xsi:type="beh:AnalogData" />
+            </Expression>
+            <Expression xsi:type="MemberSelector">
+              <Selector>Encoder</Selector>
             </Expression>
             <Expression xsi:type="ExternalizedMapping">
               <Property Name="RangeMax" DisplayName="Gain" />
@@ -775,7 +775,7 @@
                 <dsp:Min>0</dsp:Min>
                 <dsp:Max>1</dsp:Max>
                 <dsp:RangeMin>0</dsp:RangeMin>
-                <dsp:RangeMax>0.01</dsp:RangeMax>
+                <dsp:RangeMax>0.005</dsp:RangeMax>
                 <dsp:RescaleType>Linear</dsp:RescaleType>
               </Combinator>
             </Expression>
@@ -792,7 +792,7 @@
             </Expression>
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="FloatProperty">
-                <Value>0.5</Value>
+                <Value>0.3</Value>
               </Combinator>
             </Expression>
             <Expression xsi:type="PropertyMapping">
@@ -804,9 +804,9 @@
             <Expression xsi:type="Combinator">
               <Combinator xsi:type="dsp:Rescale">
                 <dsp:Min>-0.05000000074505806</dsp:Min>
-                <dsp:Max>0.5</dsp:Max>
+                <dsp:Max>0.30000001192092896</dsp:Max>
                 <dsp:RangeMin>-0.05000000074505806</dsp:RangeMin>
-                <dsp:RangeMax>0.5</dsp:RangeMax>
+                <dsp:RangeMax>0.30000001192092896</dsp:RangeMax>
                 <dsp:RescaleType>Clamp</dsp:RescaleType>
               </Combinator>
             </Expression>
@@ -860,7 +860,7 @@
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawText.bonsai">
               <ExtentX>1</ExtentX>
               <ExtentY>1</ExtentY>
-              <Text>Score 0.0</Text>
+              <Text>Score 1.3</Text>
               <Font>Microsoft Sans Serif, 120pt</Font>
               <Alignment>Center</Alignment>
               <LineAlignment>Center</LineAlignment>
@@ -1122,7 +1122,7 @@
                     <Combinator xsi:type="gl:BindTexture">
                       <gl:TextureSlot>Texture0</gl:TextureSlot>
                       <gl:ShaderName>TexturedModel</gl:ShaderName>
-                      <gl:TextureName>Strawberry</gl:TextureName>
+                      <gl:TextureName>Orange</gl:TextureName>
                       <gl:TextureTarget>Texture2D</gl:TextureTarget>
                     </Combinator>
                   </Expression>
@@ -1146,7 +1146,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="FloatProperty">
-                      <Value>0.25</Value>
+                      <Value>0.1</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="PropertyMapping">
@@ -1159,13 +1159,13 @@
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawTexturedModel.bonsai">
                     <TranslationX>0</TranslationX>
                     <TranslationY>-1</TranslationY>
-                    <TranslationZ>-43.2499428</TranslationZ>
+                    <TranslationZ>-2.705017</TranslationZ>
                     <RotationZ>0</RotationZ>
                     <RotationY>0</RotationY>
                     <RotationX>-45</RotationX>
-                    <ScaleX>0.25</ScaleX>
-                    <ScaleY>0.25</ScaleY>
-                    <ScaleZ>0.25</ScaleZ>
+                    <ScaleX>0.1</ScaleX>
+                    <ScaleY>0.1</ScaleY>
+                    <ScaleZ>0.1</ScaleZ>
                     <Ambient>
                       <X>0.2</X>
                       <Y>0.2</Y>
@@ -1182,7 +1182,7 @@
                       <Z>0.8</Z>
                     </Specular>
                     <SpecularExponent>10</SpecularExponent>
-                    <MeshName>Strawberry</MeshName>
+                    <MeshName>Orange</MeshName>
                   </Expression>
                   <Expression xsi:type="SubscribeSubject">
                     <Name>z pos</Name>
@@ -1400,7 +1400,7 @@
                   </Expression>
                   <Expression xsi:type="Combinator">
                     <Combinator xsi:type="FloatProperty">
-                      <Value>1</Value>
+                      <Value>0.1</Value>
                     </Combinator>
                   </Expression>
                   <Expression xsi:type="Combinator">
@@ -1443,7 +1443,7 @@
                   </Expression>
                   <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
                     <ExtentX>0.03</ExtentX>
-                    <ExtentY>0.05</ExtentY>
+                    <ExtentY>0.9999992</ExtentY>
                     <LocationX>0.5</LocationX>
                     <LocationY>0.95</LocationY>
                     <Layer>0</Layer>
@@ -1619,7 +1619,7 @@
             </Expression>
             <Expression xsi:type="IncludeWorkflow" Path="BonVision:Primitives.DrawQuad.bonsai">
               <ExtentX>0.05</ExtentX>
-              <ExtentY>0.927777767</ExtentY>
+              <ExtentY>0.6566667</ExtentY>
               <LocationX>0</LocationX>
               <LocationY>0.5</LocationY>
               <Layer>10</Layer>
@@ -1709,72 +1709,70 @@
       <Expression xsi:type="Combinator">
         <Combinator xsi:type="rx:Switch" />
       </Expression>
-      <Expression xsi:type="Disable">
-        <Builder xsi:type="GroupWorkflow">
-          <Name>Hardware</Name>
-          <Workflow>
-            <Nodes>
-              <Expression xsi:type="rx:BehaviorSubject" TypeArguments="harp:HarpMessage">
-                <rx:Name>Commands</rx:Name>
-              </Expression>
-              <Expression xsi:type="ExternalizedMapping">
-                <Property Name="PortName" />
-              </Expression>
-              <Expression xsi:type="Combinator">
-                <Combinator xsi:type="beh:Device">
-                  <harp:OperationMode>Active</harp:OperationMode>
-                  <harp:OperationLed>On</harp:OperationLed>
-                  <harp:DumpRegisters>true</harp:DumpRegisters>
-                  <harp:VisualIndicators>On</harp:VisualIndicators>
-                  <harp:Heartbeat>Disabled</harp:Heartbeat>
-                  <harp:IgnoreErrors>false</harp:IgnoreErrors>
-                  <harp:PortName>COM5</harp:PortName>
-                </Combinator>
-              </Expression>
-              <Expression xsi:type="rx:PublishSubject">
-                <Name>Events</Name>
-              </Expression>
-              <Expression xsi:type="SubscribeSubject">
-                <Name>Events</Name>
-              </Expression>
-              <Expression xsi:type="Combinator">
-                <Combinator xsi:type="rx:Take">
-                  <rx:Count>1</rx:Count>
-                </Combinator>
-              </Expression>
-              <Expression xsi:type="beh:CreateMessage">
-                <harp:MessageType>Write</harp:MessageType>
-                <harp:Payload xsi:type="beh:CreateEnableEncodersPayload">
-                  <beh:EnableEncoders>EncoderPort2</beh:EnableEncoders>
-                </harp:Payload>
-              </Expression>
-              <Expression xsi:type="MulticastSubject">
-                <Name>Commands</Name>
-              </Expression>
-              <Expression xsi:type="harp:CreateMessage">
-                <harp:MessageType>Write</harp:MessageType>
-                <harp:Payload xsi:type="harp:CreateMessagePayload">
-                  <harp:Address>83</harp:Address>
-                  <harp:PayloadType>U8</harp:PayloadType>
-                  <harp:Value>1</harp:Value>
-                </harp:Payload>
-              </Expression>
-              <Expression xsi:type="MulticastSubject">
-                <Name>Commands</Name>
-              </Expression>
-            </Nodes>
-            <Edges>
-              <Edge From="0" To="2" Label="Source1" />
-              <Edge From="1" To="2" Label="Source2" />
-              <Edge From="2" To="3" Label="Source1" />
-              <Edge From="4" To="5" Label="Source1" />
-              <Edge From="5" To="6" Label="Source1" />
-              <Edge From="6" To="7" Label="Source1" />
-              <Edge From="7" To="8" Label="Source1" />
-              <Edge From="8" To="9" Label="Source1" />
-            </Edges>
-          </Workflow>
-        </Builder>
+      <Expression xsi:type="GroupWorkflow">
+        <Name>Hardware</Name>
+        <Workflow>
+          <Nodes>
+            <Expression xsi:type="rx:BehaviorSubject" TypeArguments="harp:HarpMessage">
+              <rx:Name>Commands</rx:Name>
+            </Expression>
+            <Expression xsi:type="ExternalizedMapping">
+              <Property Name="PortName" />
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="beh:Device">
+                <harp:OperationMode>Active</harp:OperationMode>
+                <harp:OperationLed>On</harp:OperationLed>
+                <harp:DumpRegisters>true</harp:DumpRegisters>
+                <harp:VisualIndicators>On</harp:VisualIndicators>
+                <harp:Heartbeat>Disabled</harp:Heartbeat>
+                <harp:IgnoreErrors>false</harp:IgnoreErrors>
+                <harp:PortName>COM10</harp:PortName>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="rx:PublishSubject">
+              <Name>Events</Name>
+            </Expression>
+            <Expression xsi:type="SubscribeSubject">
+              <Name>Events</Name>
+            </Expression>
+            <Expression xsi:type="Combinator">
+              <Combinator xsi:type="rx:Take">
+                <rx:Count>1</rx:Count>
+              </Combinator>
+            </Expression>
+            <Expression xsi:type="beh:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="beh:CreateEnableEncodersPayload">
+                <beh:EnableEncoders>EncoderPort2</beh:EnableEncoders>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Commands</Name>
+            </Expression>
+            <Expression xsi:type="harp:CreateMessage">
+              <harp:MessageType>Write</harp:MessageType>
+              <harp:Payload xsi:type="harp:CreateMessagePayload">
+                <harp:Address>83</harp:Address>
+                <harp:PayloadType>U8</harp:PayloadType>
+                <harp:Value>1</harp:Value>
+              </harp:Payload>
+            </Expression>
+            <Expression xsi:type="MulticastSubject">
+              <Name>Commands</Name>
+            </Expression>
+          </Nodes>
+          <Edges>
+            <Edge From="0" To="2" Label="Source1" />
+            <Edge From="1" To="2" Label="Source2" />
+            <Edge From="2" To="3" Label="Source1" />
+            <Edge From="4" To="5" Label="Source1" />
+            <Edge From="5" To="6" Label="Source1" />
+            <Edge From="6" To="7" Label="Source1" />
+            <Edge From="7" To="8" Label="Source1" />
+            <Edge From="8" To="9" Label="Source1" />
+          </Edges>
+        </Workflow>
       </Expression>
     </Nodes>
     <Edges>
